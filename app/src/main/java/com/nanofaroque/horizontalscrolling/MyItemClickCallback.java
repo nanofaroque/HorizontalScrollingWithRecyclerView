@@ -1,4 +1,4 @@
-package com.realpage.horizontalscrolling;
+package com.nanofaroque.horizontalscrolling;
 
 /**
  * Created by omarfaroque on 3/7/16.

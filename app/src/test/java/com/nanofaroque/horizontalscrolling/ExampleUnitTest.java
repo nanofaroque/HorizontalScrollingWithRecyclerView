@@ -1,4 +1,4 @@
-package com.realpage.horizontalscrolling;
+package com.nanofaroque.horizontalscrolling;
 
 import org.junit.Test;
 

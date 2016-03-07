@@ -1,4 +1,4 @@
-package com.realpage.horizontalscrolling;
+package com.nanofaroque.horizontalscrolling;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements MyItemClickCallback {
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
-    private MyAdapter mAdapter;
+    private com.nanofaroque.horizontalscrolling.MyAdapter mAdapter;
     private ArrayList myDataset;
 
     @Override
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements MyItemClickCallba
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new MyAdapter(myDataset, this);
+        mAdapter = new com.nanofaroque.horizontalscrolling.MyAdapter(myDataset, this);
         mRecyclerView.setAdapter(mAdapter);
     }
 

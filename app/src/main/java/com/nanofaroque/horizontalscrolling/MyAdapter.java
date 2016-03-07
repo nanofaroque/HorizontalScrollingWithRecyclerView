@@ -1,4 +1,4 @@
-package com.realpage.horizontalscrolling;
+package com.nanofaroque.horizontalscrolling;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
