@@ -1,6 +1,7 @@
 package com.nanofaroque.horizontalscrolling;
 
 import org.junit.Test;
+import org.mockito.Mock;
 
 import static org.junit.Assert.*;
 
@@ -12,4 +13,5 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
+
 }

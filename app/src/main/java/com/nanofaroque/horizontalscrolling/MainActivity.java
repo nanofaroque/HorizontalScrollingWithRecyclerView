@@ -6,8 +6,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 import java.util.ArrayList;
-import java.util.List;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -15,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements MyItemClickCallba
     @Bind(R.id.my_recycler_view)
     RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
-    private com.nanofaroque.horizontalscrolling.MyAdapter mAdapter;
+    private MyAdapter mAdapter;
     private ArrayList myDataset;
 
     @Override
@@ -31,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements MyItemClickCallba
         mRecyclerView.setLayoutManager(mLayoutManager);
         // specify an adapter (see also next example)
         mAdapter = new MyAdapter(myDataset, this);
+        mAdapter.addYourFirstItemInTheList(new Integer(R.mipmap.blank_image));
         mRecyclerView.setAdapter(mAdapter);
     }
 

@@ -27,13 +27,26 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     WeakReference<Activity> mActivity;
     public static MyItemClickCallback myItemClickCallback;
 
+    /**
+     * Adapter to make a connection between your document list and RecyclerView
+     * @param ids
+     * Your document list
+     * @param activity
+     * Your activity as a context
+     * */
     public MyAdapter(ArrayList ids, Activity activity) {
         this.ids = ids;
-        ids.add(0, new Integer(R.mipmap.blank_image));
         mActivity = new WeakReference<Activity>(activity);
         myItemClickCallback = (MyItemClickCallback) activity;
     }
 
+    /**
+     * @param integer
+     * Your mipmap resources id to add at the beginning of the list
+     * */
+    public void addYourFirstItemInTheList(Integer integer){
+        ids.add(0,integer);
+    }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_image_cell, parent, false);
