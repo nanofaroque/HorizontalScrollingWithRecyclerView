@@ -12,6 +12,12 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+import static com.nanofaroque.horizontalscrolling.R.id.iv_cell;
+
 /**
  * Created by omarfaroque on 3/7/16.
  */
@@ -47,11 +53,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
+        @Bind(iv_cell)
         public ImageView ivCell;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            ivCell = (ImageView) itemView.findViewById(R.id.iv_cell);
+            ButterKnife.bind(this,itemView);
             ivCell.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
